@@ -1,0 +1,46 @@
+<html>
+  <head>
+
+    <title>Tile</title>
+    <link rel = "stylesheet" id = "sc" type = "text/css" href = "MainSmall.css">
+
+    <script language ="javascript">
+    function BigTheme()
+    {
+      var cs = document.getElementById("sc");
+      sc.setAttribute("href","MainBig.css");
+    }
+    </script>
+
+    <script type = "text/javascript">
+    function SmallTheme()
+    {
+      var cs = document.getElementById("sc");
+      sc.setAttribute("href","MainSmall.css");
+    }
+    </script>
+<!--
+    <style type="text/css">
+    body {
+    font-family:verdana,helvetica,arial,sans-serif;
+    padding:20px;
+    font-size:30px;
+    margin:0;
+    }
+    </style>
+-->
+
+  </head>
+  <body background = "Main.jpg">
+    <p>Home Page</p>
+    <p>Welcome here!</p>
+
+    <p><a href = "http://localhost/WebProject/UserUI/index.html"> User </a></p>
+    <p><a href = "http://localhost/WebProject/BookUI/index.html"> Book </a></p>
+    <p><a href = "http://localhost/WebProject/OrderUI/index.html"> Order </a></p>
+
+    <p><a href = "javascript:BigTheme()"> BigTheme </a></p>
+    <p><a href = "javascript:SmallTheme()"> SmallTheme </a></p>
+
+  </body>
+</html>
