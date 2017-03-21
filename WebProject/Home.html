@@ -4,15 +4,31 @@
     <title>Tile</title>
 
 
-    <!--<link rel = "stylesheet" id = "sc" type = "text/css" href = "css/bootstrap.css">-->
+    <link rel = "stylesheet" id = "sc" type = "text/css" href = "css/superfish.css">
 
-    <link rel = "stylesheet" id = "sc" type = "text/css" href = "MainSmall.css">
+    <!--<link rel = "stylesheet" id = "sc" type = "text/css" href = "MainSmall.css">-->
+
+    <script language = "javascript">
+    function OfficalTheme()
+    {
+      var cs = document.getElementById("sc");
+      sc.setAttribute("href", "css/superfish.css");
+    }
+    </script>
+
+    <script language = "javascript">
+    function LightTheme()
+    {
+      var cs = document.getElementById("sc");
+      sc.setAttribute("href", "css/style.css");
+    }
+    </script>
 
     <script language ="javascript">
     function BigTheme()
     {
       var cs = document.getElementById("sc");
-      sc.setAttribute("href","MainBig.css");
+      sc.setAttribute("href", "MainBig.css");
     }
     </script>
 
@@ -20,7 +36,7 @@
     function SmallTheme()
     {
       var cs = document.getElementById("sc");
-      sc.setAttribute("href","MainSmall.css");
+      sc.setAttribute("href", "MainSmall.css");
     }
     </script>
 <!--
@@ -46,6 +62,8 @@
 
     <p><a href = "javascript:BigTheme()"> BigTheme </a></p>
     <p><a href = "javascript:SmallTheme()"> SmallTheme </a></p>
+    <p><a href = "javascript:LightTheme()"> LightTheme</a></p>
+    <p><a href = "javascript:OfficalTheme()"> OfficalTheme</a></p>
 
   </body>
 </html>
