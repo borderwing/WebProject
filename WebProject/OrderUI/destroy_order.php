@@ -1,11 +1,11 @@
 <?php
 
-	$id = intval($_REQUEST['id']);
+	$orderId = intval($_REQUEST['orderId']);
 
 	include 'conn.php';
 
-	$sql = "delete from users where id=$id";
-	$result = @mysql_query($sql);
+	$sql = "delete from orders where orderId = $orderId";
+	$result = mysqli_query($conn, $sql);
 	if ($result){
 		echo json_encode(array('success'=>true));
 	} else {

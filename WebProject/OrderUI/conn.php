@@ -1,9 +1,9 @@
 <?php
 
-	$conn = @mysql_connect('localhost','root','');
+	$conn = @mysqli_connect('localhost','root','');
 	if (!$conn) {
 		die('Could not connect: ' . mysql_error());
 	}
-	mysql_select_db('Order', $conn);
+	mysqli_select_db($conn, 'book');
 
 ?>

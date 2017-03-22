@@ -3,15 +3,15 @@
 	$rows = isset($_POST['rows']) ? intval($_POST['rows']) : 10;
 	$offset = ($page-1)*$rows;
 	$result = array();
-	
+
 	include 'conn.php';
-	$rs = mysql_query("select count(*) from users");
-	$row = mysql_fetch_row($rs);
+	$rs = mysqli_query($conn, "select count(*) from users");
+	$row = mysqli_fetch_row($rs);
 	$result["total"] = $row[0];
-	$rs = mysql_query("select * from users limit $offset,$rows");
+	$rs = mysqli_query($conn, "select * from users limit $offset,$rows");
 
 	$items = array();
-	while($row = mysql_fetch_object($rs)){
+	while($row = mysqli_fetch_object($rs)){
 		array_push($items, $row);
 	}
 	$result["rows"] = $items;

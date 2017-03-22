@@ -1,11 +1,11 @@
 <?php
 
-	$id = intval($_REQUEST['id']);
+	$id = intval($_REQUEST['bookId']);
 
 	include 'conn.php';
 
-	$sql = "delete from users where id=$id";
-	$result = @mysql_query($sql);
+	$sql = "delete from books where bookId=$id";
+	$result = @mysqli_query($conn, $sql);
 	if ($result){
 		echo json_encode(array('success'=>true));
 	} else {

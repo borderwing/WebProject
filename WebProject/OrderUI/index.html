@@ -55,9 +55,11 @@
             rownumbers="true" fitColumns="true" singleSelect="true">
         <thead>
             <tr>
-                <th field="Book Name" width="50" editor="{type:'validatebox',options:{required:true}}">Book Name</th>
-                <th field="Order Amount" width="50" editor="{type:'validatebox',options:{required:true}}">Order Amount</th>
-                <th field="Price" width="50" editor="{type:'validatebox',options:{required:true}}">Price</th>
+                <th field="bookId" width="50" editor="{type:'validatebox',options:{required:true}}">Book ID</th>
+                <th field="orderAmount" width="50" editor="{type:'validatebox',options:{required:true}}">Order Amount</th>
+                <th field="orderId" width="50" editor="{type:'validatebox',options:{required:true}}">Order ID</th>
+                <th field="price" width="50" editor="{type:'validatebox',options:{required:true}}">Price</th>
+                <th field="userId" width="50" editor="{type:'validatebox',options:{required:true}}">User ID</th>
             </tr>
         </thead>
     </table>
@@ -70,14 +72,14 @@
     <script type="text/javascript">
         $(function(){
             $('#dg').edatagrid({
-                url: 'get_users.php',
-                saveUrl: 'save_user.php',
-                updateUrl: 'update_user.php',
-                destroyUrl: 'destroy_user.php'
+                url: 'get_orders.php',
+                saveUrl: 'save_order.php',
+                updateUrl: 'update_order.php',
+                destroyUrl: 'destroy_order.php'
             });
         });
     </script>
-  <p><a href = "http://localhost/WebProjectTest/WebProject/Home.html"> Home </a></p>
+  <p><a href = "../Home.html"> Home </a></p>
 
   <p><a href = "javascript:BigTheme()"> BigTheme </a></p>
   <p><a href = "javascript:SmallTheme()"> SmallTheme </a></p>
